@@ -24,8 +24,11 @@
   -->
 
 <resources>
-    <color name="main_color">#33ac71</color>
-    <color name="main_color_dark">#247950</color>
+<!--    <color name="main_color">#33ac71</color>
+    <color name="main_color_dark">#247950</color>-->
+
+    <color name="main_color">#2196F3</color>
+    <color name="main_color_dark">#1976D2</color>
 
     <color name="red_dark">#D32F2F</color>
     <color name="red">#F44336</color>
