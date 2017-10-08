@@ -1,0 +1,2 @@
+-keep class com.baiyang.fastnote.adapter.** { *; }
+-keep class com.baiyang.fastnote.model.** { *; }

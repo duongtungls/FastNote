@@ -1,0 +1,74 @@
+<!--
+  ~ FastNote
+  ~ <p/>
+  ~ Created by Tung Duong <duongtungls@gmail.com> on 08/01/2017.
+  ~ Copyright (c) 2017  Bach Duong Solution
+  ~ <p/>
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~ <p/>
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~ <p/>
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+
+<resources>
+    <string name="menu">メニュー</string>
+    <string name="settings">設定</string>
+    <string name="about">アプリについて</string>
+    <string name="exit_message">もう一度押すと終了します</string>
+    <string name="new_category">新しいカテゴリー</string>
+    <string name="empty">空</string>
+    <string name="no_categories">カテゴリーはありません!</string>
+    <string name="no_notes">メモはありません!</string>
+    <string name="no_categories_desc">新しいカテゴリーを作成して\nメモを開始</string>
+    <string name="no_notes_desc">新しく作成してメモを始めます</string>
+    <string name="no_notes_hint">メモはありません</string>
+    <string name="one_note">1 メモ</string>
+    <string name="counter_note">%1$d メモ</string>
+    <string name="title">タイトル</string>
+    <string name="choose_a_color">色を選択:</string>
+    <string name="create">作成</string>
+    <string name="cancel">キャンセル</string>
+    <string name="theme">テーマ</string>
+    <string name="edit_category">カテゴリーを編集</string>
+    <string name="edit">編集</string>
+    <string name="undo">元に戻す</string>
+    <string name="back">戻る</string>
+    <string name="new_note">新しいメモ</string>
+    <string name="tool">ツール</string>
+    <string name="start_drawing">描画を開始</string>
+    <string name="permission">アクセス許可</string>
+    <string name="storage_permission">Memento はデータを保存するために外部ストレージのアクセスが必要です。</string>
+    <string name="request">要求</string>
+    <string name="permission_error">アクセス許可が付与されていません</string>
+    <string name="permission_error_desc">Memento は外部ストレージのアクセス許可がないと正しく動作しない可能性があります。</string>
+    <string name="continue_anyway">とにかく続行</string>
+    <string name="permission_granted">アクセス許可を付与しました</string>
+    <string name="backup">データのバックアップ</string>
+    <string name="restore">データの復元</string>
+    <string name="new_folder">新しいフォルダー</string>
+    <string name="choose">選択</string>
+    <string name="ok">OK</string>
+    <string name="delete">削除</string>
+    <string name="required">このフィールドは必須です</string>
+    <string name="icon">アイコン</string>
+    <string name="no_mounted_sd">SD カードが見つかりません</string>
+    <string name="backup_saved">バックアップデータを %1$s に保存しました</string>
+    <string name="backup_error">バックアップエラー</string>
+    <string name="data_restored">バックアップデータを正常に復元しました。</string>
+    <string name="restore_error">復元エラー</string>
+    <string name="not_implemented">ベータ版はこのセクションは未実装です。</string>
+    <string name="about_desc">シンプルなメモを取るアプリ</string>
+</resources>
