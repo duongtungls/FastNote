@@ -50,6 +50,7 @@ import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.baiyang.fastnote.App;
@@ -63,6 +64,7 @@ import com.baiyang.fastnote.fragment.template.RecyclerFragment;
 import com.baiyang.fastnote.inner.Animator;
 import com.baiyang.fastnote.inner.Formatter;
 import com.baiyang.fastnote.model.Drawer;
+import com.google.android.gms.ads.MobileAds;
 
 public class MainActivity extends AppCompatActivity implements RecyclerFragment.Callbacks {
 	public static final int PERMISSION_REQUEST = 3;
@@ -90,13 +92,31 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		AdView adView = (AdView)findViewById(R.id.adView);
+		MobileAds.initialize(this, getString(R.string.admob_app_id));
+
+		final AdView adView = (AdView)findViewById(R.id.adView);
 
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build();
 
         adView.loadAd(adRequest);
+
+
+		adView.setAdListener(new AdListener() {
+			@Override
+			public void onAdLoaded() {
+				super.onAdLoaded();
+				adView.setVisibility(View.VISIBLE);
+			}
+
+			@Override
+			public void onAdFailedToLoad(int i) {
+				super.onAdFailedToLoad(i);
+				adView.setVisibility(View.GONE);
+			}
+
+		});
 
 		toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
@@ -155,24 +175,28 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
 
 	@Override
 	public void onBackPressed() {
-		if (drawerLayout.isDrawerOpen(drawerHolder)) {
-			drawerLayout.closeDrawers();
-			return;
-		}
+		try {
+			if (drawerLayout.isDrawerOpen(drawerHolder)) {
+                drawerLayout.closeDrawers();
+                return;
+            }
 
-		if (fragment.selectionState) {
-			fragment.toggleSelection(false);
-			return;
-		}
+			if (fragment.selectionState) {
+                fragment.toggleSelection(false);
+                return;
+            }
 
-		if (exitStatus) {
-			finish();
-		} else {
-			exitStatus = true;
+			if (exitStatus) {
+                finish();
+            } else {
+                exitStatus = true;
 
-			Snackbar.make(fragment.fab != null ? fragment.fab : toolbar, R.string.exit_message, Snackbar.LENGTH_LONG).show();
+                Snackbar.make(fragment.fab != null ? fragment.fab : toolbar, R.string.exit_message, Snackbar.LENGTH_LONG).show();
 
-			handler.postDelayed(runnable, 3500);
+                handler.postDelayed(runnable, 3500);
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 

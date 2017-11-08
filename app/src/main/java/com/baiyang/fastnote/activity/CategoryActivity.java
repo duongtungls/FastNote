@@ -31,6 +31,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.baiyang.fastnote.R;
@@ -39,6 +40,7 @@ import com.baiyang.fastnote.fragment.CategoryFragment;
 import com.baiyang.fastnote.fragment.template.RecyclerFragment;
 import com.baiyang.fastnote.inner.Animator;
 import com.baiyang.fastnote.model.Category;
+import com.google.android.gms.ads.MobileAds;
 
 public class CategoryActivity extends AppCompatActivity implements RecyclerFragment.Callbacks {
 	public static final int REQUEST_CODE = 1;
@@ -52,13 +54,30 @@ public class CategoryActivity extends AppCompatActivity implements RecyclerFragm
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_category);
 
-		AdView adView = (AdView)findViewById(R.id.adView);
+		MobileAds.initialize(this, getString(R.string.admob_app_id));
+
+		final AdView adView = (AdView)findViewById(R.id.adView);
 
 		AdRequest adRequest = new AdRequest.Builder()
 				.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
 				.build();
 
 		adView.loadAd(adRequest);
+
+		adView.setAdListener(new AdListener() {
+			@Override
+			public void onAdLoaded() {
+				super.onAdLoaded();
+				adView.setVisibility(View.VISIBLE);
+			}
+
+			@Override
+			public void onAdFailedToLoad(int i) {
+				super.onAdFailedToLoad(i);
+				adView.setVisibility(View.GONE);
+			}
+
+		});
 
 		toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);

@@ -23,9 +23,10 @@
   -->
 
 <resources>
-    <string name="app_name">FastNote</string>
+    <string name="app_name" translatable="false">Fast Note</string>
     <string name="menu">menu</string>
-    <string name="admob">ca-app-pub-4348214297157669/6706933921</string>
+    <string name="admob" translatable="false">ca-app-pub-2991407809005237/7285358342</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-2991407809005237~1103093377</string>
     <string name="settings">Preferences</string>
     <string name="about">About</string>
     <string name="exit_message">Press again to exit</string>

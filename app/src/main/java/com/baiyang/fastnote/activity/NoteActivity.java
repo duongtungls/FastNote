@@ -31,6 +31,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.baiyang.fastnote.R;
@@ -40,6 +41,7 @@ import com.baiyang.fastnote.fragment.SimpleNoteFragment;
 import com.baiyang.fastnote.fragment.template.NoteFragment;
 import com.baiyang.fastnote.model.Category;
 import com.baiyang.fastnote.model.DatabaseModel;
+import com.google.android.gms.ads.MobileAds;
 
 public class NoteActivity extends AppCompatActivity implements NoteFragment.Callbacks {
 	public static final int REQUEST_CODE = 2;
@@ -59,13 +61,31 @@ public class NoteActivity extends AppCompatActivity implements NoteFragment.Call
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_note);
 
-		AdView adView = (AdView)findViewById(R.id.adView);
+		MobileAds.initialize(this, getString(R.string.admob_app_id));
+
+		final AdView adView = (AdView)findViewById(R.id.adView);
 
 		AdRequest adRequest = new AdRequest.Builder()
 				.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
 				.build();
 
 		adView.loadAd(adRequest);
+
+
+		adView.setAdListener(new AdListener() {
+			@Override
+			public void onAdLoaded() {
+				super.onAdLoaded();
+				adView.setVisibility(View.VISIBLE);
+			}
+
+			@Override
+			public void onAdFailedToLoad(int i) {
+				super.onAdFailedToLoad(i);
+				adView.setVisibility(View.GONE);
+			}
+
+		});
 
 		position = data.getIntExtra("position", 0);
 

@@ -1,0 +1,76 @@
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2017 Duong Tung <duongtungls@gmail.com>
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+    <string name="app_name" translatable="false">Fast Note</string>
+    <string name="menu">菜单</string>
+    <string name="admob" translatable="false">ca-app-pub-2991407809005237/7285358342</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-2991407809005237~1103093377</string>
+    <string name="settings">设定</string>
+    <string name="about">关于</string>
+    <string name="exit_message">下次按下退出</string>
+    <string name="new_category">新类别</string>
+    <string name="empty">空</string>
+    <string name="no_categories">找不到类别!</string>
+    <string name="no_notes">未找到任何注解!</string>
+    <string name="no_categories_desc">创建一个要启动的新类别\n记录</string>
+    <string name="no_notes_desc">通过创建开始记录\na 一个新的</string>
+    <string name="no_notes_hint">无注解</string>
+    <string name="one_note">一 注解 </string>
+    <string name="counter_note">%1$d 注解</string>
+    <string name="title">标题</string>
+    <string name="choose_a_color">选择颜色:</string>
+    <string name="create">创建</string>
+    <string name="cancel">取消</string>
+    <string name="theme">主题</string>
+    <string name="edit_category">编辑类别</string>
+    <string name="edit">编辑</string>
+    <string name="undo">解开</string>
+    <string name="back">返回</string>
+    <string name="new_note">新的注解</string>
+    <string name="tool">工具</string>
+    <string name="start_drawing">开始绘画</string>
+    <string name="permission">权限</string>
+    <string name="storage_permission">FastNote 需要存取您的外部存储来存储数据.</string>
+    <string name="request">要求</string>
+    <string name="permission_error">未获得全部所需的权限</string>
+    <string name="permission_error_desc">FastNote 可能当还没得到存取外部存储的权限时做错.</string>
+    <string name="continue_anyway">无论如何继续下去</string>
+    <string name="permission_granted">获得全部所需的权限</string>
+    <string name="backup">备份数据</string>
+    <string name="restore">恢复数据</string>
+    <string name="new_folder">新的文件夹</string>
+    <string name="choose">选择</string>
+    <string name="ok">成</string>
+    <string name="delete">删除</string>
+    <string name="required">这个领城是必要的</string>
+    <string name="icon">图标</string>
+    <string name="no_mounted_sd">无法找到SD-卡</string>
+    <string name="backup_saved">备份数据已经保存在 %1$s</string>
+    <string name="backup_error">备份错误</string>
+    <string name="data_restored">返回数据已经恢复成功.</string>
+    <string name="restore_error">恢复错误</string>
+    <string name="not_implemented">这部分已经不给测试版实施.</string>
+    <string name="about_desc">联系: duongtungls@gmail.com</string>
+</resources>
